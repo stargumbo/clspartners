@@ -1,0 +1,69 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '83b13091d7498a2e05242fc904ef10a2' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"GatewayManager","description":"The manager for all you gateways","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\r\\n * GatewayManager\\r\\n * The manager for all you gateway domains\\r\\n *\\r\\n * @package gatewaymanager\\r\\n * @author Bert Oost at OostDesign.nl <bert@oostdesign.nl>\\r\\n *\\/\\r\\n\\r\\nif($modx->context->get(\'key\') == \'mgr\') { return; }\\r\\n\\r\\n$gateway = $modx->getService(\'gatewaymanager\', \'GatewayManager\', $modx->getOption(\'gatewaymanager.core_path\', null, $modx->getOption(\'core_path\').\'components\\/gatewaymanager\\/\').\'model\\/gatewaymanager\\/\',$scriptProperties);\\r\\nif (!($gateway instanceof GatewayManager)) return \'\';\\r\\n$gateway->initialize($modx->context->get(\'key\'));\\r\\n\\r\\n\\/\\/ get the hostname\\r\\n$hostname = $_SERVER[\'HTTP_HOST\'];\\r\\nif(empty($hostname)) {\\r\\n    $hostname = $modx->getOption(\'http_host\');\\r\\n}\\r\\n\\r\\n\\/\\/ and find the GatewayManager record\\r\\n$domain = $modx->getObject(\'gatewayDomain\', array(\'domain\' => $hostname, \'active\' => true));\\r\\n\\r\\nif(!empty($domain) && is_object($domain) && $domain instanceof gatewayDomain) {\\r\\n    \\r\\n    \\/\\/ the current context\\r\\n    $currContext = $modx->context->get(\'key\');\\r\\n    \\r\\n    \\/\\/ get the context from the setupped domain\\r\\n    $context = $domain->getOne(\'Context\');\\r\\n    $domContext = $context->get(\'key\');\\r\\n    $sameContext = ($currContext == $domContext) ? true : false;\\r\\n  \\r\\n    if(!$sameContext) {\\r\\n    \\r\\n        \\/\\/ switch to the new context\\r\\n        $modx->switchContext($domContext);\\r\\n    }\\r\\n      \\r\\n    \\/\\/ when domain of context is different then a canonical should be created\\r\\n    $ctxDomain = $modx->context->getOption(\'http_host\');\\r\\n    $sameDomain = ($hostname == $ctxDomain) ? true : false;\\r\\n    if(!$sameDomain) { $currContext = $domContext; }\\r\\n    \\r\\n    \\/\\/ site start check\\r\\n    $currSitestart = $modx->getOption(\'site_start\');\\r\\n    $sitestart = $domain->get(\'sitestart\');\\r\\n    $sameSitestart = ($currSitestart == $sitestart || empty($sitestart)) ? true : false;\\r\\n    \\r\\n    if(!$sameSitestart) {\\r\\n        \\r\\n        \\/\\/ when not in same context, set a canonical placeholder\\r\\n        if($sameContext || !$sameDomain) {\\r\\n            \\r\\n            $url = $modx->makeUrl($sitestart, $currContext, \'\', \'full\');\\r\\n            $modx->setPlaceholder(\'gateway.canonical\', $url);\\r\\n        }\\r\\n        \\r\\n        \\/\\/ send to the new startpage\\r\\n        $modx->sendForward($sitestart);\\r\\n    }\\r\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\r\\n * GatewayManager\\r\\n * The manager for all you gateway domains\\r\\n *\\r\\n * @package gatewaymanager\\r\\n * @author Bert Oost at OostDesign.nl <bert@oostdesign.nl>\\r\\n *\\/\\r\\n\\r\\nif($modx->context->get(\'key\') == \'mgr\') { return; }\\r\\n\\r\\n$gateway = $modx->getService(\'gatewaymanager\', \'GatewayManager\', $modx->getOption(\'gatewaymanager.core_path\', null, $modx->getOption(\'core_path\').\'components\\/gatewaymanager\\/\').\'model\\/gatewaymanager\\/\',$scriptProperties);\\r\\nif (!($gateway instanceof GatewayManager)) return \'\';\\r\\n$gateway->initialize($modx->context->get(\'key\'));\\r\\n\\r\\n\\/\\/ get the hostname\\r\\n$hostname = $_SERVER[\'HTTP_HOST\'];\\r\\nif(empty($hostname)) {\\r\\n    $hostname = $modx->getOption(\'http_host\');\\r\\n}\\r\\n\\r\\n\\/\\/ and find the GatewayManager record\\r\\n$domain = $modx->getObject(\'gatewayDomain\', array(\'domain\' => $hostname, \'active\' => true));\\r\\n\\r\\nif(!empty($domain) && is_object($domain) && $domain instanceof gatewayDomain) {\\r\\n    \\r\\n    \\/\\/ the current context\\r\\n    $currContext = $modx->context->get(\'key\');\\r\\n    \\r\\n    \\/\\/ get the context from the setupped domain\\r\\n    $context = $domain->getOne(\'Context\');\\r\\n    $domContext = $context->get(\'key\');\\r\\n    $sameContext = ($currContext == $domContext) ? true : false;\\r\\n  \\r\\n    if(!$sameContext) {\\r\\n    \\r\\n        \\/\\/ switch to the new context\\r\\n        $modx->switchContext($domContext);\\r\\n    }\\r\\n      \\r\\n    \\/\\/ when domain of context is different then a canonical should be created\\r\\n    $ctxDomain = $modx->context->getOption(\'http_host\');\\r\\n    $sameDomain = ($hostname == $ctxDomain) ? true : false;\\r\\n    if(!$sameDomain) { $currContext = $domContext; }\\r\\n    \\r\\n    \\/\\/ site start check\\r\\n    $currSitestart = $modx->getOption(\'site_start\');\\r\\n    $sitestart = $domain->get(\'sitestart\');\\r\\n    $sameSitestart = ($currSitestart == $sitestart || empty($sitestart)) ? true : false;\\r\\n    \\r\\n    if(!$sameSitestart) {\\r\\n        \\r\\n        \\/\\/ when not in same context, set a canonical placeholder\\r\\n        if($sameContext || !$sameDomain) {\\r\\n            \\r\\n            $url = $modx->makeUrl($sitestart, $currContext, \'\', \'full\');\\r\\n            $modx->setPlaceholder(\'gateway.canonical\', $url);\\r\\n        }\\r\\n        \\r\\n        \\/\\/ send to the new startpage\\r\\n        $modx->sendForward($sitestart);\\r\\n    }\\r\\n}"}',
+        'guid' => '971545d3ce1c167648ace92a32e17765',
+        'native_key' => 1,
+        'signature' => '6b9cffcdc6bdd9ca55b209d3b50e07d1',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'gatewaymanager',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"gatewaymanager-1.1.1-pl\\/modCategory\\/6ac6f42c3b743fa1f25942697389dd2a\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"gatewaymanager"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"gatewaymanager-1.1.1-pl\\/modCategory\\/6ac6f42c3b743fa1f25942697389dd2a\\/1\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"gatewaymanager"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"gatewaymanager-1.1.1-pl\\/modCategory\\/6ac6f42c3b743fa1f25942697389dd2a.tables.resolve.resolver","type":"php","name":"tables.resolve"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"gatewaymanager-1.1.1-pl\\/modCategory\\/6ac6f42c3b743fa1f25942697389dd2a.plugins.resolve.resolver","type":"php","name":"plugins.resolve"}',
+    ),
+    4 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"gatewaymanager-1.1.1-pl\\/modCategory\\/6ac6f42c3b743fa1f25942697389dd2a.dbchanges.resolve.resolver","type":"php","name":"dbchanges.resolve"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'daa7dcda16d13afa389eeebffef9fb75',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '6ac6f42c3b743fa1f25942697389dd2a',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"GatewayManager"}',
+);

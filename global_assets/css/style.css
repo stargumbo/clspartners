@@ -1,0 +1,189 @@
+@import url('../css/reset.css');
+
+/**********************************
+    Global Styles
+**********************************/
+.group { zoom: 1 }
+.group:before, .group:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
+.group:after { clear: both }
+body { padding: 0; margin: 0; width: 100%; height: 100%; font-family: Arial, Helvetica, sans-serif; line-height: 1.5; /*background: url(../img/bck.jpg) no-repeat #d6d6d6;; background-attachment: fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bck.jpg', sizingMethod='scale'); -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/bck.jpg', sizingMethod='scale')"; */ }
+img.bg { min-height: 100%; min-width: 1024px; width: 100%; height: auto; position: fixed; top: 0; left: 0; z-index: -10; }
+div{overflow:hidden;}
+.georgia { font-family: Georgia, "Times New Roman", Times, serif }
+.gold { color: #FC0 }
+h2 { font-family: Georgia, "Times New Roman", Times, serif; font-size: 17px; }
+.form-margin { margin-top: 4; position: absolute; }
+#homecolor h2 { width: 491px; max-width: 96%; background: url(../img/transparent-yellow.png); color: #fff; height: 25px; text-shadow: 3px 1px 5px #000; margin-top: -52px; margin-bottom: 25px; position: relative; padding: 10px 0 10px 20px; margin-left: auto; margin-right: auto; }
+#form-wrapper h2 { color: #a30046; margin-bottom: 15px; text-align: center; }
+#container { width: 100%; margin: 0 auto; }
+
+
+/**********************************
+    Header Styles
+**********************************/
+#masthead { width: 100%; background: #fff; height: auto; padding-bottom: 5px; }
+    #masthead img { max-width: 100%; width: 327px; }
+#header { background: url(../img/transparent-red.png); width: 100%; padding: 50px 0; }
+.header-text { font-weight: bold; width: 90%; max-width: 1024px; margin: auto; }
+    .header-text a { text-decoration: none; color: #fff; text-transform: uppercase; }
+.school { color: #fff; text-transform: uppercase; width: 90%; max-width: 1024px; margin: auto; font-family: 'Alfa Slab One', Georgia, "Times New Roman", Times, serif; font-size: 30px; letter-spacing: 1px; }
+    .school a { text-decoration: none; color: #fff; }
+#nav { width: 90%; margin:-1px auto 0; max-width: 1024px; }
+    #nav ul { list-style: none; padding: 0; margin: 0 auto 0 auto; }
+    #nav li { display: inline }
+    #nav a { color: #fff; text-decoration: none; text-transform: uppercase; font-size: 11px; padding: 5px 0 5px 5px; line-height: 1; background: url(../img/nav-bck.png) no-repeat; width: 159px; display: inline-block; }
+    #nav a:hover { background: url(../img/nav-bck-hover.png) left 1px no-repeat; }
+   
+   .ie8 #nav{margin-top:-1px;}
+    
+.TulsaEnergyLaw #header { background:#051E35; padding:30px 0; }
+	.TulsaEnergyLaw .links { float:right; font-size:11px; }
+		.TulsaEnergyLaw .links a { color:#000; }
+    .TulsaEnergyLaw #nav a { background: url(../img/tulsa-nav-bck.png) no-repeat; }
+    .TulsaEnergyLaw #nav a:hover { background: url(../img/tulsa-nav-bck-hover.png) left 1px no-repeat; }
+    
+/**********************************
+    Body Styles
+**********************************/
+.position { width: 90%; height: auto; margin: auto; max-width: 1024px; }
+#announcements { width: 90%; background: url(../img/announcements.png) left top no-repeat #fff; margin: 10px auto 0 auto; height: 25px; max-width: 1024px; }
+    #announcements a { color: #000; padding-left:184px; line-height:2em; }
+    
+.TulsaEnergyLaw #announcements { background:url(../img/tulsa-announcements.png) left top no-repeat #fff; }
+
+
+.row { width: 90%; margin: auto; clear: both; max-width: 1024px; /*overflow: auto;*/ }
+#form-wrapper { width: 30%; height: auto; float: left; padding: 20px; margin-top: 20px; margin-bottom: 20px; border: 7px #303030 solid; background: url(../img/transparent-white.png); }
+#content { width: 55%; height: auto; margin-top: 20px; background: url(../img/transparent-white.png); float: right; padding: 20px; border: 7px #303030 solid; }
+.centered { text-align: center }
+#content img { text-display: center }
+.form-text a { color: #666666; display: block; font-size: 12px; text-align: center; }
+.page-title { margin-left: -20px; margin-top: -20px; background: url(../img/page-title.png) no-repeat; width: 305px; height: 25px; color: #fff; font-size: 17px; padding-left: 10px; font-family: Georgia, "Times New Roman", Times, serif; }
+.header-img { border: solid #fff 7px; text-align: center; margin: auto; width: 511px; max-width: 100%; height: auto; position: relative; }
+#mobile-form { display: none }
+.close-box{display:none;}
+
+#recaptcha_widget { text-align:center; }
+#recaptcha_widget #recaptcha_response_field { margin:5px 0; }
+
+/**********************************
+    Page Styles
+**********************************/
+
+.homepage-image { width:100%; max-width:507px; }
+
+	.recaptcha_image_cell { background:none !important; width:280px !important; }
+	#recaptcha_response_field { width:280px !important; }
+	#recaptcha_input_area { margin:0 auto; }
+
+	#request { margin:0 auto; }
+	.recaptchatable { border:none !important; }
+
+	#recaptcha_image, #recaptcha_image img { width:100% !important; }
+
+	#form-wrapper.thanks-page, #mobile-form.thanks-page { display:none; }
+	#content.thanks-page { float:none; margin:10px auto; }
+
+
+#footer-copy { border: 7px solid #303030; clear: both; padding: 6px; text-align: center; margin:20px 0; overflow:hidden; background:#fff; }
+
+.column_footer { float:left; width:31%; margin:5px 1%; }
+	.column_footer img { float:left; }
+	.column_footer p { float:left; display:block; font-size:11px; width:50%; margin:0 3%; }
+	
+	
+/**********************************
+    Footer Styles
+**********************************/
+#footer { }
+#virtual-session { background: #a30042; border-radius: 10px; -moz-border-radius: 10px; overflow: auto; clear: both; width: 100%; height: 66px; border: solid thin #851036; color: #fff; margin: auto; }
+.TulsaEnergyLaw #virtual-session { background:#720E0C; }
+#virtual-copy { text-align: center; width: 85%; float: left; }
+    #virtual-copy p { text-align: center }
+    .TulsaEnergyLaw #virtual-copy span { color:#8F895F; font-family:Georgia; }
+#virtual-arrow { width: 15%; float: right; background: #851036; height: 100%; }
+.TulsaEnergyLaw #virtual-arrow { background:#910216; }
+    #virtual-arrow img { padding-top: 23%; padding-left: 36%; }
+    
+    
+/**********************************
+    Form Styles
+**********************************/
+button, input { line-height: normal; width: 100%; border-radius: 4px; -moz-border-radius: 4px; height: 29px; text-indent:10px; margin-bottom: 5px; border: 1px solid #ccc; color: #999; }
+.sbmtbutton { width: 100%; max-width: 239px; height: 100%; max-height: 49px; border: 0; }
+input[type="checkbox"], input[type="radio"] { margin-left:1%;width: 5%; margin-right: 10px; }
+textarea { overflow: auto; resize: vertical; width: 100%; vertical-align: top; border-radius: 4px; -moz-border-radius: 4px; border: 1px solid #ccc; }
+.zip { width: 100%; font-size: 13px; }
+.phone { width: 100%; font-size: 13px; }
+.email { width: 98% }
+.country { width: 103% }
+.sbmtbutton { background:url('/global_assets/img/request-info-loyola.png') left top no-repeat; display:block; width:238px; height:49px; } 
+.TulsaEnergyLaw .sbmtbutton { background:url('/global_assets/img/request-info-tulsa.png') left top no-repeat; }
+
+/**********************************
+    Media Queries
+**********************************/
+@-moz-document url-prefix() {
+    .zip { width: 96% }
+    .country { width: 100% }
+    .email { width: 100% }
+    .phone { width: 96% }
+}
+
+@media screen and (max-width: 1024px) {
+    img.bg { left: 50%; margin-left: -512px; }
+    .TulsaEnergyLaw .school img { width:100%; }
+}
+
+@media all and (device-width: 1025px) and (device-height: 785px) and (orientation:landscape) {
+  #nav { width: 100%; padding: 0; margin: 10px 0 0 0; }
+    #nav ul { margin: 0 }
+    #nav a { background: url(../img/795-nav-bck.png) no-repeat; display: block; margin-bottom: 2px; font-size: 13px; text-align: center; width: 95%; background-size: 100% 23px; }
+    #nav a:hover { background: url(../img/hover-795-nav-bck.png) no-repeat }
+}
+
+@media all and (max-width: 820px) {
+	.column_footer { width:98%; float:none; margin:5px 1% 15px; }
+    #form-wrapper { display: none; position:relative; }
+    #mobile-form { display: block; width: 100%; color: #fff; background: #f0b605; text-transform: uppercase; text-decoration:none; text-align: center; font-size: 18px; max-width: 820px; font-weight: bold; padding:20px 0; position: fixed; bottom: 0; }
+    #content { width: 86%; margin-bottom: 77px; }
+    #homecolor h2 { font-size: 15px }
+    #nav { width: 100%; padding: 0; margin: 10px 0 0 0; }
+        #nav ul { margin: 0 }
+        #nav a { background: url(../img/795-nav-bck.png) no-repeat; display: block; margin-bottom: 2px; font-size: 13px; text-align: center; width: 95%; background-size: 100% 23px; }
+        #nav a:hover { background: url(../img/hover-795-nav-bck.png) no-repeat; }
+        .TulsaEnergyLaw #nav a { background: url(../img/tulsa-795-nav-bck.png) no-repeat; display: block; margin-bottom: 2px; font-size: 13px; text-align: center; width: 95%; background-size: 100% 23px; }
+        .TulsaEnergyLaw #nav a:hover { background: url(../img/tulsa-hover-795-nav-bck.png) no-repeat; }
+    #virtual-arrow { display: none }
+ 	#form-wrapper { width:auto; }
+    
+	.close-box { margin-left: -20px; margin-top: -23px; background: url(../img/page-title.png) no-repeat; width: 313px; display:block; height: 25px; margin-bottom: 10px; color: #fff; position: absolute; font-size: 17px; padding-left: 10px; font-family: Georgia, "Times New Roman", Times, serif; } 
+	#virtual-copy { text-align: center; width: 100%; float: left; }
+	#virtual-session { height:auto; }
+}
+
+@media all and (max-width: 720px) {
+    #announcements { display: none }
+}
+
+@media all and (max-width: 415px) {
+    body { font-size: 12px; background: #fff; }
+    #masthead { display: none }
+    #header { background: none; height: auto; padding: 0; }
+    .header-text { background: #fff; width: 100%; text-transform: uppercase; font-size: 11px; text-align: center; padding: 10px 0; }
+        .header-text a { color: #333 }
+    .school { padding: 20px; text-align: center; margin-bottom: 5px; max-width: 100%; font-size: 20px; background: #a50c4e; }
+    .TulsaEnergyLaw .school { background: #051E35; }
+    #nav { width: 100%; padding: 0; margin: 0; }
+        #nav ul { margin: 0 }
+    #form-wrapper { display: none; width:75%; }
+    #content { width: 90%; margin: 20px 20px 50px 20px; background: none; float: none; height: auto; padding: 0; border: 0; }
+    #homecolor h2 { width: auto; background: none; color: #000; height: 25px; text-shadow: none; margin-top: 0; margin-bottom: 31px; position: relative; padding: 0; left: none; }
+    #announcements { display: none }
+    .header-img { display: none }
+    .page-title { margin-left: 0; margin-top: 0; background: none; width: auto; height: auto; color: #000; font-size: 17px; padding-left: 0; font-family: Georgia, "Times New Roman", Times, serif; }
+    #mobile-form { width: 100%; color: #fff; background: #f0b605; text-transform: uppercase; text-align: center; font-size: 18px; font-weight: bold; position: fixed; bottom: 0; padding: 10px 0; }
+        #mobile-form p { padding: 0; margin: 0; }
+    #mobile-form { display: block }
+    img.bg { display: none }
+}

@@ -1,0 +1,50 @@
+<?php return array (
+  'preserve_keys' => true,
+  'update_object' => true,
+  'unique_key' => 'text',
+  'related_objects' => 
+  array (
+    'Action' => 
+    array (
+      'a50f344f2ee957bd75607e1f6d5d391c' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 
+        array (
+          0 => 'namespace',
+          1 => 'controller',
+        ),
+        'class' => 'modAction',
+        'object' => '{"id":1,"namespace":"gatewaymanager","controller":"controllers\\/index","haslayout":1,"lang_topics":"gatewaymanager:default","assets":"","help_url":"","parent":0}',
+        'guid' => 'f692e9eb2cb4626d5256e37f1919a215',
+        'native_key' => 1,
+        'signature' => 'ffadd82d0afb14d18cbc7a32176877ac',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Action' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'namespace',
+        1 => 'controller',
+      ),
+    ),
+  ),
+  'namespace' => 'gatewaymanager',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '507678378c77c60bd3f4911182b00cc4',
+  'package' => 'modx',
+  'class' => 'modMenu',
+  'signature' => '435504ed3e327943bec60eb721ffa578',
+  'native_key' => 'gatewaymanager',
+  'object' => '{"text":"gatewaymanager","parent":"components","action":1,"description":"gatewaymanager.desc","icon":"images\\/icons\\/plugin.gif","menuindex":0,"params":"","handler":"","permissions":""}',
+);
